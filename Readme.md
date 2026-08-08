@@ -1,12 +1,29 @@
-# Clasificador
+# Evaluador
 
 ## Objetivo
 
-El objetivo de la siguiente herramienta es ser capaz de clasificar textos en español por dificultad de lectura. También, dados dos textos, ser capaz de comparar la dificultad relativa entre ellos. Con éste objetivo se definen los conceptos teóricos de _"riqueza sintáctica"_ y _"riqueza semántica"_. Luego se implementa una métrica que es capaz de estimar la _"riqueza semántica"_ de un texto dado (la estimación está lejos de la métrica teórica ideal, pero aún así es suficiente para lograr una buena aproximación al objetivo de comparar la dificultad relativa entre dos textos y clasificarlos por dificultad).
+El objetivo de la herramienta es ser capaz de evaluar la dificultad de lectura de textos en español. Permitiendo, dados dos textos, medir la dificultad relativa entre ellos.
+Además de dicho objetivo, como ejercicio teórico se definen los conceptos de _"riqueza sintáctica"_ y _"riqueza semántica"_ de un texto y se implementa una métrica capaz de estimar la _"riqueza semántica"_.
+El estimador de _"riqueza semántica"_ está lejos de coincidir con la métrica teórica ideal, sin embargo su implementación da lugar a definiciones y conceptos útiles para la estimación de la dificultad y el esfuerzo de lectura de un texto.
 
 ## Casos de prueba v3.0.0
 
-La siguiente es una tabla que muestra la evaluación de las riquezas semántica y sintáctica de cada uno de los textos de prueba, como observación, la tabla se ordenó por riqueza semántica decreciente, pero resultó ser que la riqueza sintáctica también está ordenada de forma decreciente (con la excepción de la Ilíada y la Odisea en cuyo caso la riqueza sintáctica es casi igual), indicando una alta correlación entre riquezas sintáctica y semántica.
+La siguiente tabla muestra la evaluación de los estimadores implementados para la dificultad y el esfuerzo de lectura en algunos textos de prueba.
+
+|  Nombre obra | Dificultad | Esfuerzo
+| --- | --- | --- |
+| Diccionario de la lengua española (edición del tricentenario) | 1199.13 | - |
+| La santa biblia | 353.20 | - |
+| 4 3 2 1 | 312.05 | - |
+| Don Quijote de la Mancha | 273.08 | - |
+| Cien años de soledad | 208.91 | - |
+| Ilíada | 162.91 | - |
+| Odisea | 153.89 | - |
+| Las mil y una Noches | 140.67 | - |
+| El alquimista | 103.08 | - |
+| El principito | 75.51 | - |
+
+La siguiente tabla muestra la evaluación de los estimadores de riqueza_sintáctica y riqueza_semántica sobre los mismos textos.
 
 |  Nombre obra | Autor | Riqueza sintáctica | Riqueza semántica |
 | --- | --- | --- | --- |
@@ -21,24 +38,9 @@ La siguiente es una tabla que muestra la evaluación de las riquezas semántica 
 | El alquimista | Paulo Coelho | 0.53% (3964 / 735532) | 2.67% (2089 / 77991) |
 | El principito | Saint-Exúpery | 0.31% (2294 / 735532) | 1.87% (1459 / 77991) |
 
-La siguiente tabla muestra las mismas obras ordenadas por dificultad.
-
-|  Nombre obra | Dificultad |
-| --- | --- |
-| Diccionario de la lengua española (edición del tricentenario) | 1199.13 |
-| La santa biblia | 353.20 |
-| 4 3 2 1 | 312.05 |
-| Don Quijote de la Mancha | 273.08 |
-| Cien años de soledad | 208.91 |
-| Ilíada | 162.91 |
-| Odisea | 153.89 |
-| Las mil y una Noches | 140.67 |
-| El alquimista | 103.08 |
-| El principito | 75.51 |
-
 ## Definiciones 
 
-Dado **S**, el conjunto de todas las palabras que la gramática del idioma español permite generar, y **T** un texto en español, se definen riqueza sintáctica y riqueza semántica de **T** como sigue:
+Dado el conjunto (finito) **S** de todas las palabras que la gramática del idioma español permite generar, y **T** un texto en español, se definen riqueza sintáctica y riqueza semántica de **T** como sigue:
 
 **riqueza_sintáctica(T)** = |**palabras_distintas(T)**| / |**S**|
 
@@ -122,7 +124,7 @@ La relación **=SEM**, así definida, es en efecto una relación de equivalencia
 
 La idea intuitiva de ésta relacion es que todas las palabras que deriven una misma palabra primitiva pertenecerán a la misma clase de equivalencia. Entonces dados los conceptos de palabra primitiva y palabra derivada, otra propiedad que debería cumplir la métrica **R_SEM(T)** es que sea _"invariante por palabras equivalentes bajo **=SEM**"_. Ésta será la propiedad principal que tratará de cumplir nuestra estimación de **R_SEM**.
 
-Definimos entonces, dado un texto **T**, un conjunto de palabras **P**, una palabra arbitraria **s** ∈ **S**  y **eq(S)** el conjunto de clases de equivalencia de **=SEM**:
+Dados un texto **T**, un conjunto de palabras **P**, una palabra arbitraria **s** ∈ **S**  y **eq(S)** el conjunto de clases de equivalencia de **=SEM**, definimos entonces:
 
 **clase_semántica(s)** = **x** ∈ **eq(S)**: **s** ∈ **x** (**s** debe de pertenecer a uno y solo un **x** ya que **eq(S)** es una partición de **S**, lo que asegura que **clase_semántica(s)** sea una función bien definida sobre **S**)
 
