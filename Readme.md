@@ -10,7 +10,7 @@ El estimador de _"riqueza semántica"_ está lejos de coincidir con la métrica 
 
 La siguiente tabla muestra la evaluación de los estimadores implementados para la dificultad y el esfuerzo de lectura en algunos textos de prueba.
 
-|  Nombre obra | Autor | Dificultad | Esfuerzo |
+|  Nombre de obra | Autor | Dificultad | Esfuerzo |
 | --- | --- | --- | --- |
 | Diccionario de la lengua española (edición del tricentenario) | Real Academia Española | 1199.13 | - |
 | La santa biblia | - | 353.20 | - |
@@ -25,7 +25,7 @@ La siguiente tabla muestra la evaluación de los estimadores implementados para 
 
 La siguiente tabla muestra la evaluación de los estimadores de riqueza_sintáctica y riqueza_semántica sobre los mismos textos.
 
-|  Nombre obra | Riqueza sintáctica | Riqueza semántica |
+|  Nombre de obra | Riqueza sintáctica | Riqueza semántica |
 | --- | --- | --- |
 | Diccionario de la lengua española (edición del tricentenario) | 14.73% (108408 / 735532) | 99.39% (77521 / 77991) |
 | 4 3 2 1 | 2.46% (18163 / 735532) | 11.93% (9309 / 77991) |
