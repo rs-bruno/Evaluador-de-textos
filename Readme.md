@@ -124,7 +124,7 @@ La relación **=SEM**, así definida, es en efecto una relación de equivalencia
 
 La idea intuitiva de ésta relacion es que todas las palabras que deriven una misma palabra primitiva pertenecerán a la misma clase de equivalencia. Entonces dados los conceptos de palabra primitiva y palabra derivada, otra propiedad que debería cumplir la métrica **R_SEM(T)** es que sea _"invariante por palabras equivalentes bajo **=SEM**"_. Ésta será la propiedad principal que tratará de cumplir nuestra estimación de **R_SEM**.
 
-Dados un texto **T**, un conjunto de palabras **P**, una palabra arbitraria **s** ∈ **S**  y **eq(S)** el conjunto de clases de equivalencia de **=SEM**, definimos entonces:
+Dados un texto **T**, un conjunto de palabras **P**, una palabra arbitraria **s** ∈ **S**  y **eq(S)** el conjunto de clases de equivalencia sobre **S** determinadas por **=SEM**, definimos entonces:
 
 **clase_semántica(s)** = **x** ∈ **eq(S)**: **s** ∈ **x** (**s** debe de pertenecer a uno y solo un **x** ya que **eq(S)** es una partición de **S**, lo que asegura que **clase_semántica(s)** sea una función bien definida sobre **S**)
 
