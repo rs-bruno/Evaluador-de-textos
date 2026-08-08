@@ -112,8 +112,8 @@ La relación **=SEM**, así definida, es en efecto una relación de equivalencia
 		
 			- len(**p4**-->**p5**) >= 1 y **p4**-->**p5** concatenado con **p5**->**p_z** es igual a la derivacion completa **p4**-->**p_z**.
 		
-			Dado que existe **p4**-->**p5**, concatenándole **p5**-->**p3**, se tiene que **p4**-->**p3**, por lo tanto **p4** es ancestro común de **p2** y **p3**.
-		3. n > m+1: m+1 > 0, este caso es simétrico al anterior y llegamos a que existe una derivacion **p5**-->**p4**, y por lo tanto concatenandole **p4**-->**p2** se tiene que **p5**-->**p2**, por lo tanto **p5** es ancestro común de **p2** y **p3**.
+			Dado que existe **p4**-->**p5**, concatenándole **p5**-->**p3**, se tiene que **p4**-->**p3**, por lo tanto **p4** es ancestro común de **p1** y **p3**.
+		3. n > m+1: m+1 > 0, este caso es simétrico al anterior y llegamos a que existe una derivacion **p5**-->**p4**, y por lo tanto concatenandole **p4**-->**p1** se tiene que **p5**-->**p1**, por lo tanto **p5** es ancestro común de **p1** y **p3**.
 			
 	En todos los casos existe un **p** tal que **p**-->**p2** y **p**-->**p3**, por lo tanto se concluye que **p2 =SEM p3**.
 4.	Los tres puntos anteriores muestran que **=SEM** es una relación reflexiva, simétrica y transitiva, es decir, de equivalencia.
