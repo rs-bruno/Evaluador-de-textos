@@ -12,7 +12,10 @@ def printBookEvaluations(bookName, bookPath):
     print(bookName)
     print(f"Sintactic richness: {printTwoDecimals(r.getSintacticRichness())}% ({r.getUsedWords()} / {r.getTotalWords()})")
     print(f"Semantic richness: {printTwoDecimals(r.getSemanticRichness())}% ({r.getUsedPrimitives()} / {r.getTotalPrimitives()})")
-    print(f"Difficulty: {printTwoDecimals(details.getDifficulty())}")
+
+    dyf = details.getDifficultyAndEffort()
+    print(f"Difficulty: {printTwoDecimals(dyf["difficulty"])}")
+    print(f"Effort: {printTwoDecimals(dyf["effort"])}")
     print("")
 
 booksPath = os.sep.join([os.curdir, "books", ""])

@@ -125,10 +125,16 @@ class BookDetails:
     def __init__(self, len, rich):
         self.bookLength = len
         self.richness = rich
-    def getDifficulty(self):
+    def getDifficultyAndEffort(self):
         if self.bookLength <= 0:
             return 0
-        return (self.richness.getUsedPrimitives() / self.richness.getUsedWords()) * sqrt(self.bookLength)
+        difficulty = (self.richness.getUsedPrimitives() / self.richness.getUsedWords())
+        effort = difficulty * self.bookLength
+        ret = {
+            "difficulty": difficulty,
+            "effort": effort,
+        }
+        return ret
 
 def evaluate(textFile):
     assert(not textFile.closed)
