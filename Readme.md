@@ -145,5 +145,5 @@ Por último definimos esfuerzo requerido de un texto de la siguiente manera:
 Es decir como el producto de la dificultad y el largo del texto (puede ser medido en palabras o en caracteres).
 
 ## Implementación
-
+Descripción de la implementación.
 WIP...
