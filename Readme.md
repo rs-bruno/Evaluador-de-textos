@@ -126,19 +126,23 @@ Definimos entonces, dado un texto **T**, un conjunto de palabras **P**, una pala
 
 **clase_semántica(s)** = **x** ∈ **eq(S)**: **s** ∈ **x** (**s** debe de pertenecer a uno y solo un **x** ya que **eq(S)** es una partición de **S**, lo que asegura que **clase_semántica(s)** sea una función bien definida sobre **S**)
 
-**clases_semánticas(P)**: {**clase_semántica(p)**: **p** ∈ **P**}
+**clases_semánticas(P)**: { **clase_semántica(p)**: **p** ∈ **P** }
 
 **clases_abarcadas(T)** = **clases_semanticas(palabras_distintas(T))**
 
 **riqueza_semántica(T)** = |**clases_abarcadas(T)**| / |**eq(S)**|
 
-Por último definimos dificultad de un texto como:
+Luego definimos dificultad de un texto como:
 
-**dificultad(T)** = (|**clases_abarcadas(T)**| / |**palabras_distintas(T)**|) * **sqrt(|palabras(T)|)**
+**dificultad(T)** = |**clases_abarcadas(T)**| / |**palabras_distintas(T)**|
 
-Como justificación intuitiva, pensamos en la dificultad de un texto como _"cantidad de ideas sobre cantidad de palabras que se usan para describirlas"_, dicho factor (le llamaremos **factor de dificultad**) multiplicado por el largo del texto (en realidad usamos la raiz para ponderar el largo del texto como un factor menos determinante). Cuanto más palabras usamos para expresar una idea mas fácil resulta su comprensión por lo tanto cuando el promedio de palabras por idea (|**palabras_distintas(T)**| / |**clases_abarcadas(T)**|) aumenta, la dificultad debe disminuir, lo que sugiere que el factor de dificultad sea inversamente proporcional al promedio de palabras por idea (|**palabras_distintas(T)**| / |**clases_abarcadas(T)**|)^(-1).
+Como justificación intuitiva, pensamos en la dificultad de un texto como _"cantidad de ideas sobre cantidad de palabras que se usan para describirlas"_, a dicho factor le llamaremos **factor de dificultad**. Cuanto más palabras usamos para expresar una idea mas fácil resulta su comprensión por lo tanto cuando el promedio de palabras por idea (|**palabras_distintas(T)**| / |**clases_abarcadas(T)**|) aumenta, la dificultad debe disminuir, lo que sugiere que el factor de dificultad sea inversamente proporcional al promedio de palabras por idea (|**palabras_distintas(T)**| / |**clases_abarcadas(T)**|)^(-1) = (|**clases_abarcadas(T)**| / |**palabras_distintas(T)**|).
 
-WIP...
+Por último definimos esfuerzo requerido de un texto de la siguiente manera:
+
+**esfuerzo(T)** = **dificultad(T)** * **|largo(T)|**
+
+Es decir como el producto de la dificultad y el largo del texto (puede ser medido en palabras o en caracteres).
 
 ## Implementación
 
