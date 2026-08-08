@@ -10,33 +10,34 @@ El estimador de _"riqueza semántica"_ está lejos de coincidir con la métrica 
 
 La siguiente tabla muestra la evaluación de los estimadores implementados para la dificultad y el esfuerzo de lectura en algunos textos de prueba.
 
-|  Nombre de obra | Autor | Dificultad | Esfuerzo |
+|  Nombre de obra | Autor | Dificultad | **Esfuerzo** |
 | --- | --- | --- | --- |
-| Diccionario de la lengua española (edición del tricentenario) | Real Academia Española | 1199.13 | - |
-| La santa biblia | - | 353.20 | - |
-| 4 3 2 1 | Paul Auster | 312.05 | - |
-| Don Quijote de la Mancha | Miguel de Cervantes | 273.08 | - |
-| Cien años de soledad | Gabriel García Márquez | 208.91 | - |
-| Ilíada | Homero | 162.91 | - |
-| Odisea | Homero | 153.89 | - |
-| Las mil y una Noches | - | 140.67 | - |
-| El alquimista | Paulo Coelho | 103.08 | - |
-| El principito | Saint-Exúpery | 75.51 | - |
+| Diccionario de la lengua española (edición del tricentenario) | Real Academia Española | 0.71 | **2010848.60** |
+| La santa biblia | - | 0.40 | **309463.37** |
+| 4 3 2 1 | Paul Auster | 0.51 | **190002.41** |
+| Don Quijote de la Mancha | Miguel de Cervantes | 0.44 | **169144.05** |
+| Cien años de soledad | Gabriel García Márquez | 0.56 | **77928.73** |
+| Ilíada | Homero | 0.42 | **63107.19** |
+| Odisea | Homero | 0.43 | **53900.50** |
+| Las mil y una Noches | - | 0.53 | **36652.61** |
+| El alquimista | Paulo Coelho | 0.52 | **20164.85** |
+| El principito | Saint-Exúpery | 0.63 | **8965.15** |
 
 La siguiente tabla muestra la evaluación de los estimadores de riqueza_sintáctica y riqueza_semántica sobre los mismos textos.
 
-|  Nombre de obra | Riqueza sintáctica | Riqueza semántica |
+|  Nombre de obra | Riqueza sintáctica | **Riqueza semántica** |
 | --- | --- | --- |
-| Diccionario de la lengua española (edición del tricentenario) | 14.73% (108408 / 735532) | 99.39% (77521 / 77991) |
-| 4 3 2 1 | 2.46% (18163 / 735532) | 11.93% (9309 / 77991) |
-| La santa biblia | 2.33% (17146 / 735532) | 8.86% (6912 / 77991) |
-| Don Quijote de la Mancha | 2.05% (15144 / 735532) | 8.56% (6677 / 77991) |
-| Cien años de soledad | 1.61% (11852 / 735532) | 8.51% (6638 / 77991) |
-| Odisea | 1.25% (9267 / 735532) | 5.22% (4072 / 77991) |
-| Ilíada | 1.26% (9299 / 735532) | 5.01% (3911 / 77991) |
-| Las mil y una Noches | 0.89% (6568 / 735532) | 4.54% (3546 / 77991) |
-| El alquimista | 0.53% (3964 / 735532) | 2.67% (2089 / 77991) |
-| El principito | 0.31% (2294 / 735532) | 1.87% (1459 / 77991) |
+| Diccionario de la lengua española (edición del tricentenario) | 14.73% (108408 / 735532) | **99.39%** (77521 / 77991) |
+| Diccionario de la lengua española (edición del tricentenario) | 14.73% (108408 / 735532) | **99.39%** (77521 / 77991) |
+| 4 3 2 1 | 2.46% (18163 / 735532) | **11.93%** (9309 / 77991) |
+| La santa biblia | 2.33% (17146 / 735532) | **8.86%** (6912 / 77991) |
+| Don Quijote de la Mancha | 2.05% (15144 / 735532) | **8.56%** (6677 / 77991) |
+| Cien años de soledad | 1.61% (11852 / 735532) | **8.51%** (6638 / 77991) |
+| Odisea | 1.25% (9267 / 735532) | **5.22%** (4072 / 77991) |
+| Ilíada | 1.26% (9299 / 735532) | **5.01%** (3911 / 77991) |
+| Las mil y una Noches | 0.89% (6568 / 735532) | **4.54%** (3546 / 77991) |
+| El alquimista | 0.53% (3964 / 735532) | **2.67%** (2089 / 77991) |
+| El principito | 0.31% (2294 / 735532) | **1.87%** (1459 / 77991) |
 
 ## Definiciones 
 
